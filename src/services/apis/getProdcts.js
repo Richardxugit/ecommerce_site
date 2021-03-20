@@ -1,14 +1,13 @@
-import axios from 'axios'
+import axios from 'axios';
 
-const getProducts = () => {
+export default () => {
     axios.get('./products.json')
         .then(res => {
-            console.log(res.data);
+            return res.data;
         })
-        .catch(error => {
-            console.log(error);
+        .catch(err => {
+            console.log('Could not fetch products. Try again later.');
         });
 
 }
 
-export default getProducts;

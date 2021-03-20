@@ -1,17 +1,12 @@
 import React, { Component } from 'react';
-
-import getProdcts from '../../services/apis/getProdcts';
-
+import List from '../components/List/List';
 class App extends Component {
-
-  componentDidMount(){
-    getProdcts()
-  }
-
   render() {
     return (
       <div className="App">
-        APP
+        <main>
+          <List/>
+        </main>
       </div>
     );
   }
