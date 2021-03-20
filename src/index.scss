@@ -7,7 +7,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  margin: 0;
+  color: #1b1a20;
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  padding: 20px 2%;
+  max-width: 1200px;
+  margin: 50px auto 0 auto;
 }
