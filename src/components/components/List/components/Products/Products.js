@@ -16,8 +16,10 @@ const Products = props => {
       />
       <p className="list-item__title">{product.name}</p>
       <div className="list-item__price">
-        <div>AU${product.price}</div>
-        <div>{product.content}</div>
+        <div className="val">
+          <b>AU${product.price}</b>
+          <div>{product.content}</div>
+        </div>
       </div>
       <div className="list-item__buy-btn">Add to cart</div>
     </div>

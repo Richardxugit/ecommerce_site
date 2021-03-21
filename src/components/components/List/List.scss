@@ -1,72 +1,68 @@
 .list-container {
-    width: 85%;
+  width: 85%;
+  float: left;
+  min-height: 600px;
+
+  .list-item {
     float: left;
-    min-height: 600px;
-  
-    .list-item {
-      float: left;
-      width: 25%;
-      position: relative;
-      text-align: center;
-      box-sizing: border-box;
-      padding: 10px;
-      margin-bottom: 30px;
-      border: 1px solid transparent;
-      cursor: pointer;
-  
-      &:hover {
-        border: 3px solid #eabf22;
-  
-        .list-item__buy-btn {
-          background-color: #eabf22;
-        }
-      }
-  
-      .list-stopper {
-        position: absolute;
-        color: #ececec;
-        top: 10px;
-        right: 10px;
-        padding: 5px;
-        font-size: 0.6em;
-        background-color: #1b1a20;
-        cursor: default;
-      }
-  
-      &__thumb {
-        img {
-          width: 100%;
-        }
-      }
-  
-      &__title {
-        position: relative;
-        padding: 0 20px;
-        height: 45px;
-  
-        &::before {
-          content: '';
-          width: 230px;
-          height: 3px;
-          background-color: #eabf22;
-          position: absolute;
-          bottom: 0;
-          margin-left: -90px;
-        }
-      }
-  
-      &__price {
-        height: 60px;
-      }
-  
-      &__buy-btn {
-        background-color: #1b1a20;
-        color: #fff;
-        padding: 15px 0;
-        margin-top: 15px;
-        cursor: pointer; 
-        transition: background-color 0.2s;
+    width: 25%;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border: 3px solid #eabf22;
+
+      .list-item__buy-btn {
+        background-color: #eabf22;
       }
     }
+
+    &__thumb {
+      img {
+        width: 100%;
+      }
+    }
+
+    &__title {
+      position: relative;
+      padding: 0 20px;
+      height: 45px;
+
+      &::before {
+        content: "";
+        width: 50px;
+        height: 3px;
+        background-color: #eabf22;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -25px;
+      }
+    }
+
+    &__price {
+      height: 60px;
+
+      .val {
+        b {
+          font-size: 1em;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    &__buy-btn {
+      background-color: #1b1a20;
+      color: #fff;
+      padding: 15px 0;
+      margin-top: 15px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
   }
-  
+}
