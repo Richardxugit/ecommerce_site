@@ -31,7 +31,7 @@
         user-select: none;
         width: 35px;
         height: 35px;
-        font-size: 0.8em;
+        font-size: 1em;
         margin-bottom: 8px;
         margin-right: 8px;
         border-radius: 50%;
@@ -60,7 +60,7 @@
           cursor: pointer;
         }
   
-        /* Create a custom checkbox */
+       
         .checkmark {
           position: absolute;
           top: 0;
@@ -72,7 +72,7 @@
           line-height: 35px;
           text-align: center;
           color: #1b1a20;
-          background-color: #ececec;
+          background-color: #eabf22;
   
           border: 1px solid transparent;
         }

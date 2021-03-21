@@ -45,11 +45,9 @@ class List extends Component {
   };
 
   render() {
-    console.log(this.props)
-    let {products} = this.props;
-
-    const product= products.map(product => {
+    const product = this.props.products.map(product => {
       return (
+        
         <Product product={product} key={product.id} />
       );
     });

@@ -14,11 +14,10 @@ const Products = props => {
         src={product.imageUrl}
         alt={product.title}
       />
-      <p className="list-item__title">{product.title}</p>
+      <p className="list-item__title">{product.name}</p>
       <div className="list-item__price">
-        <div className="val">
-          <small>AU${product.price}</small>
-        </div>
+        <div>AU${product.price}</div>
+        <div>{product.content}</div>
       </div>
       <div className="list-item__buy-btn">Add to cart</div>
     </div>

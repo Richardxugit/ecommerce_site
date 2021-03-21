@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateSort } from '../../../services/Sort/action';
 import Options from './components/Options/Options';
+import './Sort.scss';
 
 const sortBy = [
   { value: '', label: 'Select' },

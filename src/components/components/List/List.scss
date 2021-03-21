@@ -3,35 +3,6 @@
     float: left;
     min-height: 600px;
   
-    &-header {
-      margin-bottom: 10px;
-  
-      .products-found {
-        float: left;
-        margin: 0;
-        margin-top: 8px;
-      }
-  
-      .sort {
-        float: right;
-  
-        select {
-          background-color: #fff;
-          outline: none;
-          border: 1px solid #ececec;
-          border-radius: 2px;
-          margin-left: 10px;
-          width: auto;
-          height: 35px;
-          cursor: pointer;
-  
-          &:hover {
-            border: 1px solid #5b5a5e;
-          }
-        }
-      }
-    }
-  
     .list-item {
       float: left;
       width: 25%;
@@ -44,10 +15,10 @@
       cursor: pointer;
   
       &:hover {
-        border: 1px solid #eee;
+        border: 3px solid #eabf22;
   
         .list-item__buy-btn {
-          background-color: #eabf00;
+          background-color: #eabf22;
         }
       }
   
@@ -75,39 +46,25 @@
   
         &::before {
           content: '';
-          width: 20px;
-          height: 2px;
-          background-color: #eabf00;
+          width: 230px;
+          height: 3px;
+          background-color: #eabf22;
           position: absolute;
           bottom: 0;
-          left: 50%;
-          margin-left: -10px;
+          margin-left: -90px;
         }
       }
   
       &__price {
         height: 60px;
-  
-        .val {
-          b {
-            font-size: 1.5em;
-            margin-left: 5px;
-          }
-        }
-  
-        .installment {
-          color: #9c9b9b;
-        }
       }
   
       &__buy-btn {
         background-color: #1b1a20;
         color: #fff;
         padding: 15px 0;
-        margin-top: 10px;
-        cursor: pointer;
-        // border-bottom: 2px solid #151419;
-  
+        margin-top: 15px;
+        cursor: pointer; 
         transition: background-color 0.2s;
       }
     }

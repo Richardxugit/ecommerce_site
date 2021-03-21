@@ -11,21 +11,10 @@ export default initialState => {
         rootReducer,
         initialState,
         compose(
-            applyMiddleware(...middleware)
-            // window.__REDUX_DEVTOOLS_EXTENSION__ &&
-            // window.__REDUX_DEVTOOLS_EXTENSION__()
+            applyMiddleware(...middleware),
+            window.__REDUX_DEVTOOLS_EXTENSION__ &&window.__REDUX_DEVTOOLS_EXTENSION__()
         )
     );
-
-    store.subscribe(() => {
-        const state = store.getState();
-        const persist = {
-            cart: state.cart,
-            total: state.total
-        };
-
-        window.localStorage.setItem('state', JSON.stringify(persist));
-    });
 
     return store;
 };

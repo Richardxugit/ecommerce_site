@@ -2,7 +2,9 @@ import React from 'react';
 
 import './Loading.scss';
 
-export default () => (
-  <div className="loading">
+const loading = () => (
+  <div className="loading"><div /><div /><div /><div />
   </div>
 );
+
+export default loading
