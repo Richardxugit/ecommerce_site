@@ -4,7 +4,7 @@ const initialState = {
   item: []
 };
 
-export default function(state = initialState, action) {
+const filterReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_FILTER:
       return {
@@ -16,4 +16,5 @@ export default function(state = initialState, action) {
   }
 }
 
+export default filterReducer;
 

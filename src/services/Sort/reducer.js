@@ -4,7 +4,7 @@ const initialState = {
   type: ''
 };
 
-export default function(state = initialState, action) {
+const sortReducer = (state = initialState, action) => {
   switch (action.type) {
     case UPDATE_SORT:
       return {
@@ -15,3 +15,5 @@ export default function(state = initialState, action) {
       return state;
   }
 }
+
+export default sortReducer;

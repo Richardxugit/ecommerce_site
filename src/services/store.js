@@ -2,7 +2,7 @@ import { compose, createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers';
 
-export default initialState => {
+let initialState =()=> {
     initialState =
         JSON.parse(window.localStorage.getItem('state')) || initialState;
     const middleware = [thunk];
@@ -19,3 +19,5 @@ export default initialState => {
 
     return store;
 };
+
+export default initialState;

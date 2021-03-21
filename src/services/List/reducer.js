@@ -4,7 +4,7 @@ const initialState = {
     products: []
 };
 
-export default function (state = initialState, action) {
+const listReducer= (state = initialState, action) =>{
     switch (action.type) {
         case FETCH_PRODUCTS:
             return {
@@ -15,3 +15,6 @@ export default function (state = initialState, action) {
             return state;
     }
 }
+
+export default listReducer;
+
