@@ -8,6 +8,7 @@ const Products = props => {
   return (
     <div
       className="list-item"
+      onClick={() => props.addProduct(product)}
     >
       <Thumb
         classes="list-item__thumb"

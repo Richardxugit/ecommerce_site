@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { fetchProducts } from '../../../services/List/action';
-
+import { addProduct } from '../../../services/Cart/actions';
 import Product from './components/Products/Products';
 import Filter from '../Filter/Filter';
 import Sort from '../Sort/Sort';
@@ -47,8 +46,8 @@ class List extends Component {
   render() {
     const product = this.props.products.map(product => {
       return (
-        
-        <Product product={product} key={product.id} />
+
+        <Product product={product} addProduct={this.props.addProduct} key={product.id} />
       );
     });
 
@@ -73,5 +72,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { fetchProducts }
+  { fetchProducts, addProduct }
 )(List);
