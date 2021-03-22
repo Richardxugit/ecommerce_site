@@ -107,7 +107,7 @@ class Cart extends Component {
             onClick={() => this.openCart()}
             className="bag bag--cart-closed"
           >
-            <span><FontAwesomeIcon icon={faShoppingCart} size={"3x"} /></span>
+            <FontAwesomeIcon icon={faShoppingCart} size={"3x"} />
             <span className="bag__quantity">{cartTotal.productQuantity}</span>
           </span>
         )}
