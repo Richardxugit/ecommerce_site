@@ -4,7 +4,7 @@ import Thumb from '../../../List/components/Products/components/Thumb/Thumb';
 class CartProducts extends Component {
 
     render() {
-        const { product, removeProduct} = this.props;
+        const { product, removeProduct } = this.props;
 
         const classes = ['list-item'];
 
@@ -13,7 +13,7 @@ class CartProducts extends Component {
                 <div
                     className="list-item__del"
                     onClick={() => removeProduct(product)}
-                />
+                >x</div>
                 <Thumb
                     classes="list-item__thumb"
                     src={product.imageUrl}

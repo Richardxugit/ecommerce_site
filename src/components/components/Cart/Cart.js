@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { loadCart, removeProduct, updateCart } from '../../../services/Cart/actions';
 import CartProducts from './components/CartProducts/CartProducts';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Cart.scss';
+import { faShoppingBasket, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 class Cart extends Component {
   constructor(props) {
@@ -79,7 +81,7 @@ class Cart extends Component {
 
     const products = cartProducts.map(p => {
       return (
-        <CartProducts product={p}  removeProduct={removeProduct} key={p.id} />
+        <CartProducts product={p} removeProduct={removeProduct} key={p.id} />
       );
     });
 
@@ -105,6 +107,7 @@ class Cart extends Component {
             onClick={() => this.openCart()}
             className="bag bag--cart-closed"
           >
+            <span><FontAwesomeIcon icon={faShoppingCart} size={"3x"} /></span>
             <span className="bag__quantity">{cartTotal.productQuantity}</span>
           </span>
         )}
@@ -112,17 +115,17 @@ class Cart extends Component {
         <div className="cart__content">
           <div className="cart__header">
             <span className="bag">
+              <FontAwesomeIcon icon={faShoppingCart} size={"3x"} />
               <span className="bag__quantity">{cartTotal.productQuantity}</span>
             </span>
-            <span className="header-title">Bag</span>
+            <span className="header-title">Cart</span>
           </div>
 
           <div className="cart__list-container">
             {products}
             {!products.length && (
               <p className="list-empty">
-                Add some products in the bag <br />
-                :)
+                Please add some products <br />
               </p>
             )}
           </div>

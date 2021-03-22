@@ -4,7 +4,7 @@
     right: -450px;
     width: 450px;
     height: 100%;
-    background-color: #1b1a20;
+    background-color: #575658;
     box-sizing: border-box;
   
     transition: right 0.2s;
@@ -17,7 +17,7 @@
       width: 50px;
       height: 50px;
       color: #ececec;
-      background-color: #1b1a20;
+      background-color: #575658;
       text-align: center;
       line-height: 50px;
       position: absolute;
@@ -33,18 +33,18 @@
     .bag {
       width: 40px;
       height: 40px;
+      color:#ececec;
       position: relative;
       display: inline-block;
       vertical-align: middle;
       margin-right: 15px;
-      background-image: url('https://rawcdn.githack.com/jeffersonRibeiro/react-shopping-cart/ccf64841ddfdfedfce9821b2b7ff2c8075afb17c/src/static/bag-icon.png');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
   
       &--cart-closed {
         position: absolute;
-        background-color: #000;
+        color: 000;
         background-size: 50%;
         left: -60px;
         width: 60px;
@@ -63,14 +63,14 @@
         height: 18px;
         color: #0c0b10;
         font-weight: bold;
-        font-size: 0.7em;
+        font-size: 1em;
         text-align: center;
         line-height: 18px;
         border-radius: 50%;
-        background-color: #eabf00;
+        background-color: #eabf22;
         position: absolute;
         bottom: -5px;
-        right: 0px;
+        right: -10px;
       }
     }
   
@@ -82,7 +82,7 @@
   
       .header-title {
         font-weight: bold;
-        font-size: 1.2em;
+        font-size: 2em;
         vertical-align: middle;
       }
     }
@@ -102,7 +102,6 @@
         position: relative;
         box-sizing: border-box;
         padding: 5%;
-  
         transition: background-color 0.2s, opacity 0.2s;
   
         &::before {
@@ -116,6 +115,7 @@
         }
   
         &__del {
+          color: #ececec;
           width: 16px;
           height: 16px;
           top: 15px;
@@ -123,8 +123,6 @@
           border-radius: 50%;
           position: absolute;
           background-size: auto 100%;
-          background-image: url('https://rawcdn.githack.com/jeffersonRibeiro/react-shopping-cart/ccf64841ddfdfedfce9821b2b7ff2c8075afb17c/src/static/sprite_delete-icon.png');
-          background-repeat: no-repeat;
           z-index: 2;
           cursor: pointer;
   
@@ -159,12 +157,12 @@
           }
   
           .desc {
-            color: #5b5a5e;
+            color: #ececec;
             margin: 0;
           }
         }
         &__price {
-          color: #eabf00;
+          color: #eabf22;
           text-align: right;
           width: 25%;
         }
@@ -179,7 +177,7 @@
       width: 100%;
       height: 200px;
       z-index: 2;
-      background-color: #1b1a20;
+      background-color: #575658;
   
       &::before {
         content: '';
@@ -194,7 +192,7 @@
   
       .sub,
       .sub-price {
-        color: #5b5a5e;
+        color: #ececec;
         vertical-align: middle;
         display: inline-block;
       }
@@ -213,7 +211,7 @@
         }
   
         &__val {
-          color: #eabf00;
+          color: #eabf22;
           font-size: 22px;
         }
       }
@@ -230,7 +228,8 @@
         transition: background-color 0.2s;
   
         &:hover {
-          background-color: #000;
+          background-color: #eabf22;
+          color: #0c0b10;
         }
       }
     }
