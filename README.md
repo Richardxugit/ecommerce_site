@@ -15,6 +15,7 @@ This simple application prototype shows a e-commerce cart application by using t
 ### Technical
 The application use the React and Redux as the main Technical.
 ## Getting started
+Put the Products.json file to the public folder
 ### Package installation
 ### `npm install`
 ### Start the React App
