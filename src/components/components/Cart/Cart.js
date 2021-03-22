@@ -75,12 +75,11 @@ class Cart extends Component {
   };
 
   render() {
-    console.log(this.props)
     const { cartTotal, cartProducts, removeProduct } = this.props;
 
     const products = cartProducts.map(p => {
       return (
-        <CartProducts product={p} quantity={cartTotal.productQuantity} removeProduct={removeProduct} key={p.id} />
+        <CartProducts product={p}  removeProduct={removeProduct} key={p.id} />
       );
     });
 

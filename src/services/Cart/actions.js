@@ -19,7 +19,6 @@ export const removeProduct = product => ({
 });
 
 export const updateCart = (cartProducts) => dispatch => {
-  console.log(cartProducts)
   let productQuantity = cartProducts.reduce((sum, p) => {
     sum += p.quantity;
     return sum;

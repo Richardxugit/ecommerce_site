@@ -4,7 +4,7 @@ import Thumb from '../../../List/components/Products/components/Thumb/Thumb';
 class CartProducts extends Component {
 
     render() {
-        const { product, removeProduct,quantity } = this.props;
+        const { product, removeProduct} = this.props;
 
         const classes = ['list-item'];
 
@@ -22,7 +22,7 @@ class CartProducts extends Component {
                 <div className="list-item__details">
                     <p className="title">{product.title}</p>
                     <p className="desc">
-                        Quantity: {quantity}
+                        Quantity: {product.quantity}
                     </p>
                 </div>
                 <div className="list-item__price">
