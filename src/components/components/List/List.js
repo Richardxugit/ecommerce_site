@@ -6,14 +6,16 @@ import Product from './components/Products/Products';
 import Filter from '../Filter/Filter';
 import Sort from '../Sort/Sort';
 import Loading from '../Loading/Loading';
-
+import Pagination from './components/Pagination/Pagination';
 import './List.scss';
 
 class List extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false
+      loading: false,
+      curPage: 1,
+      productPerPage: 7
     };
   }
 
@@ -43,6 +45,19 @@ class List extends Component {
     });
   };
 
+  paginate = pageNumber => {
+    this.setState({ curPage: pageNumber });
+  }
+
+  goPrev = () => {
+    this.setState({ curPage: this.state.curPage - 1 })
+  }
+
+  goNext = () => {
+    this.setState({ curPage: this.state.curPage + 1 });
+  }
+
+
   render() {
     const product = this.props.products.map(product => {
       return (
@@ -51,13 +66,27 @@ class List extends Component {
       );
     });
 
+    let { curPage, productPerPage } = this.state
+
+    const indexOfLastPost = curPage * productPerPage;
+    const indexOfFirstPost = indexOfLastPost - productPerPage;
+    const currentProducts = product.slice(indexOfFirstPost, indexOfLastPost);
+
     return (
       <React.Fragment>
         {this.state.loading && <Loading />}
         <Filter />
         <div className="list-container">
           <Sort productsLength={product.length} />
-          {product}
+          {currentProducts}
+          <Pagination
+            curPage={curPage}
+            productPerPage={productPerPage}
+            totalProducts={product.length}
+            paginate={this.paginate}
+            goNext={this.goNext}
+            goPrev={this.goPrev}
+          />
         </div>
       </React.Fragment>
     );
