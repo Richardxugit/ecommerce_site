@@ -17,7 +17,7 @@ class Pagination extends Component {
     let pages = [];
 
     pages.push(<li onClick={this.handlegoPrev.bind(this)}
-      className={curPage === 1 ? "nomore" : ""} >Pre</li>)
+      className={curPage === 1 ? "nomore" : ""} key={0}>Pre</li>)
 
     for (let i = 1; i <= pageNumbers.length; i++) {
       pages.push(<li onClick={this.handlePaginate.bind(this, i)} className={curPage === i ? "active" : ""} key={i}>{i}</li>)
